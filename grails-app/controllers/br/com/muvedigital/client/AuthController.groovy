@@ -48,6 +48,7 @@ class AuthController {
         redirect uri: '/'
     }
 
+
     def getRoles(){
         if (session.accessToken) {
             def response = oauthService.getRole(session.accessToken.access_token)
